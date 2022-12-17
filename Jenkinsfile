@@ -9,7 +9,7 @@ node('nodes') {
   {
   sh "${mavenHome}/bin/mvn clean package"
   }
-  
+  /*
   stage('SonarQubeReport')
   {
   sh "${mavenHome}/bin/mvn clean sonar:sonar"
@@ -30,6 +30,7 @@ node('nodes') {
   stage('SendEmailNotification')
   {
    emailext body: '''Build is Over...!!
+   */
 
     Regards.
    Govardhan''', subject: 'Build over!!', to: 'tgvrdhn@gmail.com'      
